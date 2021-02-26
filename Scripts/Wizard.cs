@@ -8,7 +8,7 @@ public class Wizard : Enemy
     public float attackRate = 2f;
 
     [Range(5, 20)]
-    public int maxDamage = 10;
+    public int maxDamage = 20;
 
     float nextAttackTime;
 
