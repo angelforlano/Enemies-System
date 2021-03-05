@@ -6,6 +6,8 @@ using UnityEngine.AI;
 public abstract class Enemy : MonoBehaviour
 {
     public NavMeshAgent agent;
+    public Animator animator;
+    
     public List<Transform> patrol = new List<Transform>();
     
     [Range(5, 100)]

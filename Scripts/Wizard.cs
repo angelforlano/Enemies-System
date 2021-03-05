@@ -20,6 +20,7 @@ public class Wizard : Enemy
         {
             player.TakeDamage(Random.Range(1, maxDamage+1));
             nextAttackTime = Time.time + attackRate;
+            animator.SetTrigger("attack");
         }
     }
 
@@ -27,12 +28,14 @@ public class Wizard : Enemy
     {
         agent.stoppingDistance = 0;
         ChasePlayer();
+        animator.SetBool("walk", true);
     }
 
     void OnIdle()
     {
         agent.stoppingDistance = 0;
         GoPatrolPoint();
+        animator.SetBool("walk", true);
     }
 
     void FixedUpdate()
